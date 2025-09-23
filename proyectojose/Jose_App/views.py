@@ -1,7 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 def index(request):
-    return render(request, "Jose_App/index.html")
+    return HttpResponse("Hola Mundo")
 
 def suma(request):
     resultado = None  # valor inicial
@@ -23,3 +24,6 @@ def random_number(request):
 
 def saludo(request, nombre):
     return render(request, "Jose_App/saludo.html", {"nombre": nombre.capitalize()})
+
+def index(request):
+    return render(request, "Jose_App/index.html")
