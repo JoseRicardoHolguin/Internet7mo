@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+def index(request):
+    return render(request, "Jose_App/index.html")
+
 def suma(request):
     resultado = None  # valor inicial
 
