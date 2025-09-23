@@ -9,3 +9,11 @@ def index(request):
         resultado = num1 + num2  # operación: suma
 
     return render(request, "Jose_App/index.html", {"resultado": resultado})
+
+def ruido(request):
+    return render(request, "Jose_App/ruido.html")
+
+def random_number(request):
+    import random
+    numero_aleatorio = random.randint(1, 100)
+    return render(request, "Jose_App/random_number.html", {"numero": numero_aleatorio})
