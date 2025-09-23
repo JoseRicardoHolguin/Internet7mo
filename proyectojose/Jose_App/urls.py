@@ -5,4 +5,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('suma/', views.suma, name='suma'),
     path('ruido/', views.ruido, name='ruido'),
+    path('random/', views.random_number, name='random_number'),
+    path('saludo/<str:nombre>/', views.saludo, name='saludo')
 ]
