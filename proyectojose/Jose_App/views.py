@@ -27,3 +27,6 @@ def saludo(request, nombre):
 
 def index(request):
     return render(request, "Jose_App/index.html")
+
+def about(request):
+    return render(request, "Jose_App/about.html")
