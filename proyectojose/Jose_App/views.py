@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from .models import Task
+
+tasks = ["foo", "bar", "baz"]
 
 def index(request):
     return HttpResponse("Hola Mundo")
@@ -31,3 +34,21 @@ def index(request):
 
 def about(request):
     return render(request, "Jose_App/about.html")
+
+def task_index(request):
+    return render(request, "Jose_App/task_index.html", 
+                  {"tasks": tasks})
+
+def tasks_add(request):
+    if request.method == "POST":
+        task = request.POST.get("task")
+        if task:
+            task.append(task)
+        return HttpResponseRedirect (reverse("task_index"))
+    return render(request, "Jose_App/task_index.html")
+
+def tasks_admin_list(request):
+    task = Task.objects.all().order_by("_created_at")
+    return render(request, "Jose_App/task_admin_list.html", {"tasks": task})    
+
+    
