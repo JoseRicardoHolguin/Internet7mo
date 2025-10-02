@@ -40,7 +40,7 @@ def tasks_add(request):
     if request.method == "POST":
         task = request.POST.get("task")
         if task:
-            task.append(task)
+            tasks.append(task)
         return HttpResponseRedirect (reverse("task_index"))
     return render(request, "Jose_App/task_index.html")
 
