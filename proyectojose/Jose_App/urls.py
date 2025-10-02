@@ -11,5 +11,5 @@ urlpatterns = [
     path('tasks/', views.task_index, name='task_index'),
     path('tasks/add/', views.tasks_add, name='tasks_add'),
     path('tasks/admin/', views.tasks_admin_list, name='tasks_admin_list'),
-    path("menu",views.index2,name="index2")
+    path("menu/",views.index2,name="index2")
 ]
