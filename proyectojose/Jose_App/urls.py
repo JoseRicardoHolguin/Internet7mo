@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.urls import path
 from . import views
 
@@ -13,3 +14,5 @@ urlpatterns = [
     path('tasks/admin/', views.tasks_admin_list, name='tasks_admin_list'),
     path("menu/",views.index2,name="index2")
 ]
+=======
+>>>>>>> 09d45b3bc0132344c595dd88a8cec27f44696a5c
