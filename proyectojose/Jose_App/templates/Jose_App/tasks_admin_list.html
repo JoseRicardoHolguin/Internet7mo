@@ -1,0 +1,14 @@
+{% extends "Jose_App/base.html" %}
+{% block content %}
+<div class="container py-4">
+  <h1 class="mb-4">Lista de tareas (desde admin / base de datos)</h1>
+  <ul class="list-group mb-3">
+    {% for task in tasks %}
+      <li class="list-group-item">{{ task.nombre }}</li>
+    {% empty %}
+      <li class="list-group-item">No hay tareas en la base de datos.</li>
+    {% endfor %}
+  </ul>
+  <a href="/admin/Jose_App/task/" class="btn btn-primary">Administrar tareas en admin</a>
+</div>
+{% endblock %}
