@@ -5,9 +5,6 @@ from .models import Task
 
 tasks = ["foo", "bar", "baz"]
 
-def index(request):
-    return HttpResponse("Hola Mundo")
-
 def suma(request):
     resultado = None  # valor inicial
 
