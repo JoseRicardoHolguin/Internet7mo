@@ -1,0 +1,15 @@
+{% extends "Jose_App/base.html" %}
+{% block content %}
+<div class="container py-4">
+  <h1 class="mb-4">Agregar tarea manual</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="task" class="form-label">Nueva tarea:</label>
+      <input type="text" class="form-control" id="task" name="task" required>
+    </div>
+    <button type="submit" class="btn btn-success">Agregar</button>
+    <a href="{% url 'task_index' %}" class="btn btn-secondary">Volver a la lista</a>
+  </form>
+</div>
+{% endblock %}
