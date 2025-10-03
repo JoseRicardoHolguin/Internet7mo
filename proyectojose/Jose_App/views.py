@@ -42,12 +42,12 @@ def tasks_add(request):
         if task:
             tasks.append(task)
         return HttpResponseRedirect (reverse("task_index"))
-    return render(request, "Jose_App/task_index.html")
+    return render(request, "Jose_App/tasks_add.html")  
 
 def tasks_admin_list(request):
     task = Task.objects.all().order_by("created_at")
-    return render(request, "Jose_App/task_admin_list.html", {"tasks": task})    
+    return render(request, "Jose_App/task_admin_list.html", {"tasks": task})
 
 
 
-    
+
