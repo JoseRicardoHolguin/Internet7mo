@@ -48,6 +48,6 @@ def tasks_admin_list(request):
     task = Task.objects.all().order_by("created_at")
     return render(request, "Jose_App/task_admin_list.html", {"tasks": task})
 
-
-
+def index2(request):
+    return render(request, "Jose_App/index2.html")
 
